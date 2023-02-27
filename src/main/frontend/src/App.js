@@ -4,6 +4,9 @@ import axios from 'axios';
 import Home from './pages/Home';
 import About from "./pages/About";
 import Counter from "./pages/Counter"
+import Input from "./pages/Input"
+import Input2 from "./pages/Input2"
+import ScoreBoard from "./pages/ScoreBoard";
 
 function App() {
   const [hello, setHello] = useState('')
@@ -13,19 +16,26 @@ function App() {
         .then(response => setHello(response.data))
         .catch(error => console.log(error))
   }, []);
-  
+
 
     return (
-        <div>
+        <div className="bg-gray-100 p-4">
             <nav>
-                <Link to="/">Home</Link> | <Link to="/about">About</Link>
+                <Link to="/">Home</Link> | <Link to="/about">About</Link> | <Link to="/count">Count</Link>
+                | <Link to="/input">Input</Link> | <Link to="/input2">Input2</Link> | <Link to="/scoreboard">ScoreBoard</Link>
             </nav>
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/about" element={<About />} />
+                <Route path="/count" element={<Counter />} />
+                <Route path="/input" element={<Input />} />
+                <Route path="/input2" element={<Input2 />} />
+                <Route path="/scoreboard" element={<ScoreBoard />} />
             </Routes>
-            백엔드에서 가져온 데이터입니다 : {hello}
-            <Counter/>
+            백엔드에서 가져온 데이터입니다 :
+            <ul className="bg-red-100">
+                {hello}
+            </ul>
         </div>
     );
 }

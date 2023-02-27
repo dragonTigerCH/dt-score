@@ -12,9 +12,9 @@ function Counter() {
 
     return (
         <div>
-            <button onClick={increase}>+1</button>
-            <button onClick={decrease}>-1</button>
-            <p>{num}</p>
+            <button className={'bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded'} onClick={increase}>+1</button>
+            <button className={'bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'} onClick={decrease}>-1</button>
+            <p className="text-base font-bold text-blue-500">{num}</p>
         </div>
     )
 }
