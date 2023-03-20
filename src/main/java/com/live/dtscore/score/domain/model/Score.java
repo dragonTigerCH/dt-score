@@ -1,4 +1,4 @@
-package com.live.dtscore.test.score.domain.model;
+package com.live.dtscore.score.domain.model;
 
 import lombok.*;
 
