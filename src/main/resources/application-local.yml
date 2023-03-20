@@ -1,1 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=score
+    username: postgres
+    password: mirim2020!@
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true # 실행되는 query를 보여줌
+
+logging.level:
+  org.hibernate.SQL: debug
 
